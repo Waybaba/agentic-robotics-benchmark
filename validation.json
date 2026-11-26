@@ -1,0 +1,40 @@
+{
+  "engine": {
+    "commit": "bfb75050aca2c54b45c5ab23bae6028a834a468a",
+    "version": "0.1.1"
+  },
+  "run_id": "validate-2c7905e0",
+  "schema_version": 1,
+  "tasks": [
+    {
+      "failures": [],
+      "name": "grounded-intelligence-initiative/scout_assisted_home_vacuum",
+      "oracle": {
+        "episode_id": "grounded-intelligence-initiative.scout_assisted_home_vacuum-oracle-e9cd9d7e",
+        "lock_digest": "sha256:9655ea6a01f42e7240793ad691ee522bb494b0fb50c72c8f25b06d110c488d3c",
+        "lock_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-oracle-e9cd9d7e/lock.json",
+        "result_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-oracle-e9cd9d7e/result.json",
+        "rewards": {
+          "reward": 1.0
+        },
+        "status": "completed"
+      },
+      "passed": true,
+      "reward_names": [
+        "reward"
+      ],
+      "spec_hash": "sha256:f52e4902d6171b56520eff1eb2df13706a78866d2094a4a80ca4803e09419e9c",
+      "untouched": {
+        "episode_id": "grounded-intelligence-initiative.scout_assisted_home_vacuum-untouched-62cde992",
+        "lock_digest": "sha256:4e77496b6dd7e54d9b0a2c7ae92324928a9be34e683626f2a95b5dec485399e3",
+        "lock_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-untouched-62cde992/lock.json",
+        "result_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-untouched-62cde992/result.json",
+        "rewards": {
+          "reward": 0.0
+        },
+        "status": "completed"
+      },
+      "warnings": []
+    }
+  ]
+}

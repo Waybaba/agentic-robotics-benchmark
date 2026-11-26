@@ -1,0 +1,5 @@
+[scout_assisted_home_vacuum]
+title = "Guide a vacuum with an aerial scout"
+summary = "A vacuum and a short-flight scout use local cameras to find spills, push a supply carton into a room and back, and return to the dock without damaging the rugs."
+platforms = ["ground"]
+stages = ["behavior"]
