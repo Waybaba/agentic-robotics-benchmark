@@ -1,11 +1,10 @@
-"""Isolated closed-loop verifier. The submission controls actions, never the world or the score."""
+"""Evaluate an unprivileged submitted policy on hidden continuous apartments."""
 
-import sys
 from pathlib import Path
+import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from cameras import Cameras
-from world import Home
+from ego_sim import Simulation
 from robotics_grader import (
     Solver,
     SolverAborted,
@@ -25,64 +24,53 @@ def main():
     rng = seed_rng()
     try:
         solver = Solver(step_timeout=cfg["step_timeout_s"])
-    except (SolverAborted, SolverMissing) as err:
+    except (SolverMissing, SolverAborted) as err:
         write_verdict(zero_verdict(reason=str(err), anchored=anchor is not None))
         return
     rows = []
     aborted = 0
     try:
         for _ in range(cfg["episodes"]):
-            w = Home(rng.seed(bits=64), cfg["ticks"], cfg["flight_ticks"])
-            cam = Cameras(w)
+            sim = Simulation(rng.seed(bits=64), cfg["ticks"], cfg["flight_ticks"])
             try:
                 solver.reset()
-                while w.t < w.budget:
-                    action = solver.act(w.t, cam.observation())
+                while sim.t < sim.budget:
+                    action = solver.act(sim.t, sim.observation())
                     try:
-                        w.advance(action)
-                    except ValueError as exc:
-                        raise SolverAborted(str(exc)) from exc
-                    if w.result()["success"]:
+                        sim.advance(action)
+                    except ValueError as err:
+                        raise SolverAborted(str(err)) from err
+                    if sim.result()["success"]:
                         break
-                rows.append(w.result())
+                rows.append(sim.result())
             except SolverAborted:
-                rows.append(
-                    {
-                        "success": False,
-                        "score": 0,
-                        "parked": False,
-                        "clean": {},
-                        "ticks": 0,
-                    }
-                )
                 aborted += 1
+                rows.append({})
             finally:
-                cam.close()
+                sim.close()
     finally:
         solver.close()
     n = len(rows)
-    extra = {
-        "full_success_rate": sum(r["success"] for r in rows) / n,
-        "carton_parked_rate": sum(r["parked"] for r in rows) / n,
-        "carton_staged_rate": sum(r.get("staged", False) for r in rows) / n,
-        "mean_treatment_preserved": sum(r.get("treatment_preserved", 0) for r in rows)
-        / n,
-        "mean_clean_fraction": sum(sum(r["clean"].values()) / 3 for r in rows) / n,
-        "episodes_aborted": aborted,
-        "episodes": n,
-        "unscuffed_rate": sum(r.get("scuffed_runners") == 0 for r in rows) / n,
-    }
-    wins = [r["ticks"] for r in rows if r["success"]]
-    if wins:
-        extra["mean_ticks_on_success"] = sum(wins) / len(wins)
+
+    def avg(k):
+        return sum(float(row.get(k, 0)) for row in rows) / n
+
     write_verdict(
         ratio_rewards(
-            sum(r["score"] for r in rows) / n,
+            avg("score"),
             anchor,
-            metric_name="mean_cleaning_score",
             higher_is_better=True,
             full_at=meta["full_at"],
-            extra=extra,
+            metric_name="mean_cleaning_score",
+            extra={
+                "episodes": n,
+                "episodes_aborted": aborted,
+                "full_success_rate": avg("success"),
+                "mean_clean_fraction": avg("clean_fraction"),
+                "carton_staged_rate": avg("staged"),
+                "carton_parked_rate": avg("parked"),
+                "mean_treatment_preserved": avg("treatment_preserved"),
+            },
         )
     )
 

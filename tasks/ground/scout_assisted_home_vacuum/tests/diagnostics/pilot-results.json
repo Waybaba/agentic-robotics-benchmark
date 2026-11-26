@@ -1,0 +1,190 @@
+{
+  "version": "egocentric pilot, not calibrated for the leaderboard",
+  "map_assisted_author": {
+    "development_seeds": [
+      617,
+      804,
+      2110,
+      5201,
+      5202,
+      5203
+    ],
+    "additional_seeds": [
+      51031,
+      51032,
+      51033,
+      51034,
+      51035,
+      51036
+    ],
+    "results": [
+      {
+        "seed": 617,
+        "rooms": 12,
+        "area": 578.2,
+        "doors": 13,
+        "ticks": 221,
+        "success": true,
+        "score": 1,
+        "read": "blue",
+        "expected": "blue"
+      },
+      {
+        "seed": 804,
+        "rooms": 12,
+        "area": 573.5,
+        "doors": 12,
+        "ticks": 209,
+        "success": true,
+        "score": 1,
+        "read": "amber",
+        "expected": "amber"
+      },
+      {
+        "seed": 2110,
+        "rooms": 9,
+        "area": 454.3,
+        "doors": 11,
+        "ticks": 188,
+        "success": true,
+        "score": 1,
+        "read": "amber",
+        "expected": "amber"
+      },
+      {
+        "seed": 5201,
+        "rooms": 12,
+        "area": 594.6,
+        "doors": 13,
+        "ticks": 237,
+        "success": true,
+        "score": 1,
+        "read": "amber",
+        "expected": "amber"
+      },
+      {
+        "seed": 5202,
+        "rooms": 12,
+        "area": 565.6,
+        "doors": 12,
+        "ticks": 210,
+        "success": true,
+        "score": 1,
+        "read": "blue",
+        "expected": "blue"
+      },
+      {
+        "seed": 5203,
+        "rooms": 9,
+        "area": 463.4,
+        "doors": 9,
+        "ticks": 196,
+        "success": true,
+        "score": 1,
+        "read": "amber",
+        "expected": "amber"
+      },
+      {
+        "seed": 51031,
+        "rooms": 9,
+        "area": 478.7,
+        "doors": 9,
+        "ticks": 178,
+        "success": true,
+        "score": 1,
+        "read": "blue",
+        "expected": "blue"
+      },
+      {
+        "seed": 51032,
+        "rooms": 9,
+        "area": 479.8,
+        "doors": 10,
+        "ticks": 222,
+        "success": true,
+        "score": 1,
+        "read": "blue",
+        "expected": "blue"
+      },
+      {
+        "seed": 51033,
+        "rooms": 12,
+        "area": 657.7,
+        "doors": 14,
+        "ticks": 224,
+        "success": true,
+        "score": 1,
+        "read": "blue",
+        "expected": "blue"
+      },
+      {
+        "seed": 51034,
+        "rooms": 9,
+        "area": 458.1,
+        "doors": 12,
+        "ticks": 234,
+        "success": true,
+        "score": 1,
+        "read": "amber",
+        "expected": "amber"
+      },
+      {
+        "seed": 51035,
+        "rooms": 12,
+        "area": 585.3,
+        "doors": 14,
+        "ticks": 212,
+        "success": true,
+        "score": 1,
+        "read": "blue",
+        "expected": "blue"
+      },
+      {
+        "seed": 51036,
+        "rooms": 9,
+        "area": 456.2,
+        "doors": 9,
+        "ticks": 224,
+        "success": true,
+        "score": 1,
+        "read": "amber",
+        "expected": "amber"
+      }
+    ]
+  },
+  "closed_loop_small_budget": {
+    "model": "gpt-6.2-sol",
+    "reasoning": "low",
+    "time_limit_s": 360,
+    "attempt": "native codex-cli; no controller submitted before gateway usage ceiling",
+    "provider_usage": {
+      "model_calls": 8,
+      "input_tokens": 131781,
+      "cache_read_tokens": 33792,
+      "cache_write_tokens": 0,
+      "output_tokens": 827
+    },
+    "full_success_rate": null,
+    "raw_score": null,
+    "participant_difficulty": "not measured"
+  },
+  "still_image_probe": {
+    "model": "gpt-6.2-sol",
+    "answer": "A shows a bed, B a chest of drawers, and C a sofa. The blue job slip is in B. The images alone don’t establish whether the bedroom is in the northern or southern part of the apartment.",
+    "calls": 1,
+    "input": 176,
+    "output": 48,
+    "total": 224,
+    "images": [
+      "northern-bedroom.jpg",
+      "study-work-slip.jpg",
+      "living-room.jpg"
+    ],
+    "input_was_unlabelled": true,
+    "grade": "Bed, sofa, blue slip, and lack of a direction cue correct; bookcase mistaken for a chest of drawers. One non-interactive public scene, not navigation evidence."
+  },
+  "practice_console": {
+    "public_first_tick_wire_bytes": 11622,
+    "path_mode_bytes_in_test": 749
+  }
+}
