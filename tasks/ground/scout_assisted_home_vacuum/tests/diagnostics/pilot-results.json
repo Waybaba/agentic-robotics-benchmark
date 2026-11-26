@@ -1,5 +1,18 @@
 {
   "version": "egocentric pilot, not calibrated for the leaderboard",
+  "native_bootstrap": {
+    "task_revision": "a7e0d68681af1579a955f018e08a44d54914cc27",
+    "engine_revision": "bfb75050aca2c54b45c5ab23bae6028a834a468a",
+    "untouched_reward": 0.0,
+    "unprivileged_wall_follower": {
+      "episodes": 6,
+      "episodes_aborted": 0,
+      "mean_cleaning_score": 0.0,
+      "full_success_rate": 0.0
+    },
+    "validation_passed": false,
+    "failure_codes": ["oracle_not_full"]
+  },
   "map_assisted_author": {
     "development_seeds": [
       617,

@@ -10,6 +10,7 @@ Mesa OSMesa, and `CUDA_VISIBLE_DEVICES="" LP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=
 python tests/diagnostics/test_task.py -v
 python tests/diagnostics/ego_reference.py --seeds 617 804 2110 5201 5202 5203
 python tests/diagnostics/replay_ego.py
+python tests/diagnostics/replay_ego.py --gif /tmp/first-person.gif
 python tests/diagnostics/ego_gallery.py /tmp/ego-gallery
 python tests/diagnostics/export_ego_practice.py /tmp/public-practice
 ```
@@ -24,6 +25,10 @@ The public seed 617 [action trace](onboard/success-617.jsonl) replays against fr
 it contains only left/right wheel, suction, pitch, roll, lift and yaw commands. It is not
 a solution to another apartment. The [flight triptych](onboard/egocentric-scout.jpg)
 comes from ticks 34, 77 and 119 of a separate continuously flown survey.
+The [11-second dual-camera replay](https://github.com/Waybaba/agentic-robotics-benchmark/blob/1a3512341eb077d7ce183aa5793644f594d47b31/egocentric/first-person.gif)
+shows the successful seed 617 trace through the vacuum camera (left) and scout camera
+(right). The scout feed ends when its battery expires. This is an accelerated replay
+of actual observations, not a model rollout.
 
 A capped SOL closed-loop attempt exhausted its input budget without submitting a controller.
 This is an inconclusive run, **not model failure on the task**. In a separate one-call,
@@ -40,6 +45,11 @@ It is a feasibility witness, not a participant and not the ALE anchor. The unpri
 grader never imports or runs the privileged pilot for a participant. Until a competitive
 unprivileged reference is measured, the anchor is deliberately null and normalized reward
 is not admissible; use `mean_cleaning_score` and `full_success_rate` for pilot measurements.
+
+**Native engine gate.** On revision `a7e0d686`, the untouched submission earned 0 and the
+ordinary wall-follower earned a raw mean of 0 across six hidden homes (none aborted).
+Both engine runs completed. Native validation **did not pass**: its only failure was
+`oracle_not_full`. The map-assisted results above do not satisfy this gate.
 
 The public practice MJB is a single fixed, baked apartment and includes its own local scene
 metadata. It contains neither a hidden scene generator nor a hidden seed. The public runner
