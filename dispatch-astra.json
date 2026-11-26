@@ -1,0 +1,18 @@
+{
+  "reward": 0.85,
+  "metrics": {
+    "ratio": 0.85,
+    "anchor_recorded": 1.0,
+    "mean_cleaning_score": 0.85,
+    "full_success_rate": 0.6666666666666666,
+    "carton_parked_rate": 1.0,
+    "carton_staged_rate": 1.0,
+    "mean_treatment_preserved": 1.0,
+    "mean_clean_fraction": 0.8888888888888888,
+    "episodes_aborted": 0.0,
+    "episodes": 6.0,
+    "unscuffed_rate": 1.0,
+    "mean_ticks_on_success": 124.0,
+    "reward_exact": 0.85
+  }
+}

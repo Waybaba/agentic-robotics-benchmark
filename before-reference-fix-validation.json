@@ -1,0 +1,45 @@
+{
+  "engine": {
+    "commit": "bfb75050aca2c54b45c5ab23bae6028a834a468a",
+    "version": "0.1.1"
+  },
+  "run_id": "validate-0bac1849",
+  "schema_version": 1,
+  "tasks": [
+    {
+      "failures": [
+        {
+          "code": "oracle_not_full",
+          "message": "oracle reward must be one after rounding to two decimals, got {'reward': 0.94}"
+        }
+      ],
+      "name": "grounded-intelligence-initiative/scout_assisted_home_vacuum",
+      "oracle": {
+        "episode_id": "grounded-intelligence-initiative.scout_assisted_home_vacuum-oracle-6e9fd9bf",
+        "lock_digest": "sha256:2620120684d9735f6f0fecc4b55f2de51f439429310aacc64cf60fc7c30ff23f",
+        "lock_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-oracle-6e9fd9bf/lock.json",
+        "result_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-oracle-6e9fd9bf/result.json",
+        "rewards": {
+          "reward": 0.94
+        },
+        "status": "completed"
+      },
+      "passed": false,
+      "reward_names": [
+        "reward"
+      ],
+      "spec_hash": "sha256:c06b5bd3ac4cf2d71b0ba37be04aba773ccad80472a63e86e106839ed258ed8d",
+      "untouched": {
+        "episode_id": "grounded-intelligence-initiative.scout_assisted_home_vacuum-untouched-6df2c95d",
+        "lock_digest": "sha256:28ec9db3e94df113455a0f18fe8eba61c305e5ea290fc613885ff9dc5589c4ed",
+        "lock_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-untouched-6df2c95d/lock.json",
+        "result_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-untouched-6df2c95d/result.json",
+        "rewards": {
+          "reward": 0.0
+        },
+        "status": "completed"
+      },
+      "warnings": []
+    }
+  ]
+}

@@ -3,17 +3,17 @@
     "commit": "bfb75050aca2c54b45c5ab23bae6028a834a468a",
     "version": "0.1.1"
   },
-  "run_id": "validate-2c7905e0",
+  "run_id": "validate-d3dce9f8",
   "schema_version": 1,
   "tasks": [
     {
       "failures": [],
       "name": "grounded-intelligence-initiative/scout_assisted_home_vacuum",
       "oracle": {
-        "episode_id": "grounded-intelligence-initiative.scout_assisted_home_vacuum-oracle-e9cd9d7e",
-        "lock_digest": "sha256:9655ea6a01f42e7240793ad691ee522bb494b0fb50c72c8f25b06d110c488d3c",
-        "lock_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-oracle-e9cd9d7e/lock.json",
-        "result_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-oracle-e9cd9d7e/result.json",
+        "episode_id": "grounded-intelligence-initiative.scout_assisted_home_vacuum-oracle-ce9409b9",
+        "lock_digest": "sha256:4661b7adb176d40444d25ed50b5c134e43de1fa4ce81b090d4956be6a59269b9",
+        "lock_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-oracle-ce9409b9/lock.json",
+        "result_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-oracle-ce9409b9/result.json",
         "rewards": {
           "reward": 1.0
         },
@@ -23,12 +23,12 @@
       "reward_names": [
         "reward"
       ],
-      "spec_hash": "sha256:f52e4902d6171b56520eff1eb2df13706a78866d2094a4a80ca4803e09419e9c",
+      "spec_hash": "sha256:c06b5bd3ac4cf2d71b0ba37be04aba773ccad80472a63e86e106839ed258ed8d",
       "untouched": {
-        "episode_id": "grounded-intelligence-initiative.scout_assisted_home_vacuum-untouched-62cde992",
-        "lock_digest": "sha256:4e77496b6dd7e54d9b0a2c7ae92324928a9be34e683626f2a95b5dec485399e3",
-        "lock_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-untouched-62cde992/lock.json",
-        "result_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-untouched-62cde992/result.json",
+        "episode_id": "grounded-intelligence-initiative.scout_assisted_home_vacuum-untouched-00f18c67",
+        "lock_digest": "sha256:e4a13ceb016c70a460c40094693dba3dbe4553887da24092aa348f7d1f82b2ee",
+        "lock_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-untouched-00f18c67/lock.json",
+        "result_path": "grounded-intelligence-initiative.scout_assisted_home_vacuum-untouched-00f18c67/result.json",
         "rewards": {
           "reward": 0.0
         },

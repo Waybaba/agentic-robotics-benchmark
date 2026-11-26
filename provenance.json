@@ -1,0 +1,61 @@
+[
+  {
+    "episode": "grounded-intelligence-initiative.scout_assisted_home_vacuum-9d3c4c76",
+    "status": "completed",
+    "finished_at": "2026-11-26T20:18:41.570024Z",
+    "source": {
+      "commit": "6780245175ef46b2c0b5f444ba7ac8d79374a353",
+      "dirty": false,
+      "kind": "git",
+      "path": "tasks/ground/scout_assisted_home_vacuum",
+      "repo": "https://github.com/Waybaba/agentic-robotics-benchmark.git"
+    },
+    "engine": {
+      "commit": "bfb75050aca2c54b45c5ab23bae6028a834a468a",
+      "schema_version": 2,
+      "version": "0.1.1"
+    },
+    "harness": "codex-cli",
+    "model": "gpt-6.2-astra",
+    "settings": {
+      "reasoning_effort": "medium",
+      "web_search": false
+    },
+    "resources": {
+      "cpus": 2,
+      "gpu_types": [],
+      "gpus": 0,
+      "memory_mb": 4096,
+      "sudo": false
+    },
+    "lock_sha256": "5e28a727169575d2b05d35112ad950ca8d2f46cd879eae055ebc9fe1b0c29484"
+  },
+  {
+    "episode": "grounded-intelligence-initiative.scout_assisted_home_vacuum-oracle-ce9409b9",
+    "status": "completed",
+    "finished_at": "2026-11-26T20:19:22.866138Z",
+    "source": {
+      "commit": "5a9739950b3a3a256dd2b774922ca5cdee401eeb",
+      "dirty": false,
+      "kind": "git",
+      "path": "tasks/ground/scout_assisted_home_vacuum",
+      "repo": "https://github.com/Waybaba/agentic-robotics-benchmark.git"
+    },
+    "engine": {
+      "commit": "bfb75050aca2c54b45c5ab23bae6028a834a468a",
+      "schema_version": 2,
+      "version": "0.1.1"
+    },
+    "harness": "oracle",
+    "model": "",
+    "settings": {},
+    "resources": {
+      "cpus": 2,
+      "gpu_types": [],
+      "gpus": 0,
+      "memory_mb": 4096,
+      "sudo": false
+    },
+    "lock_sha256": "4661b7adb176d40444d25ed50b5c134e43de1fa4ce81b090d4956be6a59269b9"
+  }
+]

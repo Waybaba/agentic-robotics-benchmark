@@ -1,0 +1,46 @@
+{
+  "task_commit": "c0c9768194f73d7f106f39b34ec59dc6d21fe3ce",
+  "source_episode": "grounded-intelligence-initiative.scout_assisted_home_vacuum-06d543b3",
+  "artifact_sha256": {
+    "controller.py": "ad47ba546b689a9219752bed343fabaaf24cb76d75dfc4991c4e6ba5ac20d7b3",
+    "run.sh": "6cdcfd85bbd4babc33b4ad468bd38ef9aac440c2b7e318d098962a6927329ec8"
+  },
+  "model_calls": 0,
+  "note": "Two diagnostic replays of one frozen program; no second model submission.",
+  "verdicts": [
+    {
+      "reward": 0.93,
+      "metrics": {
+        "ratio": 0.9291666666666667,
+        "anchor_recorded": 1.0,
+        "mean_cleaning_score": 0.9291666666666667,
+        "full_success_rate": 0.8333333333333334,
+        "carton_parked_rate": 0.8333333333333334,
+        "carton_staged_rate": 1.0,
+        "mean_clean_fraction": 1.0,
+        "episodes_aborted": 0.0,
+        "episodes": 6.0,
+        "unscuffed_rate": 1.0,
+        "mean_ticks_on_success": 83.0,
+        "reward_exact": 0.9291666666666667
+      }
+    },
+    {
+      "reward": 1.0,
+      "metrics": {
+        "ratio": 1.0,
+        "anchor_recorded": 1.0,
+        "mean_cleaning_score": 1.0,
+        "full_success_rate": 1.0,
+        "carton_parked_rate": 1.0,
+        "carton_staged_rate": 1.0,
+        "mean_clean_fraction": 1.0,
+        "episodes_aborted": 0.0,
+        "episodes": 6.0,
+        "unscuffed_rate": 1.0,
+        "mean_ticks_on_success": 108.0,
+        "reward_exact": 1.0
+      }
+    }
+  ]
+}
